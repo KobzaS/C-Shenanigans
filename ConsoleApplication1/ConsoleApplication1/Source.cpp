@@ -1,21 +1,21 @@
 #include <iostream>
-#include <iomanip>
-
 
 using namespace std;
 
 int main()
 {
-	int x = 8;
-	int y = 3;
-	double z;
+	int sum = 0;
 
-	//z = (double)x / y;
-	z = static_cast<double>(x / y); // does the operation in integer rather than double = 2
-	cout << setprecision(2) << fixed; // forcing the compiler to show 2 decimals
-	cout << z << endl; // formatting output related. requires iomanip 
-	z = static_cast<double>(x) / y; // better way to do it. = 2.6667
+	for (int i = 1; i <= 5; i++)
+	{
+		int input;
+		cout << "Please enter an integer number: ";
+		cin >> input;
+		sum += input;
+		
+	}
 
-	cout << z << endl;
+	cout << "\nThe total of your numbers is " << sum << endl;
+
 	return 0;
 }
